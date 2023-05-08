@@ -11,15 +11,20 @@
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
             crossorigin="anonymous"
         />
+        <link rel="icon" href="img/logorsj.ico" />
 
-        <title>Test Belajar Laravel 8</title>
+        <title>Home Belajar Laravel 8</title>
     </head>
-    <body>
-        <h1><b>TEST</b></h1>
-        {{ $nama } } <br />
-        {{ $email }} <br />
-        {{ $nama }} <br />
-        <img src="img/logorsj0.png" alt="Logo RSJ" height="75" />
+    <body class="bg-wbs">
+        <div class="container-md mt-5">
+            <div class="card shadow-lg border-0 mb-4">
+                <div class="card-header bg-danger text-light">
+                    @yield('card-header')
+                </div>
+                <div class="card-body">@yield('card-body')</div>
+                <!-- <div class="card-footer">@yield('card-body')</div> -->
+            </div>
+        </div>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
