@@ -12,6 +12,32 @@
             crossorigin="anonymous"
         />
         <link rel="icon" href="img/logorsj.ico" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        />
+        <link
+            href="vendor/fontawesome-free/css/all.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="vendor/fontawesome-free-6.2.1-web/css/all.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="vendor/bootstrap-icons/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+        <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" />
+        <link href="vendor/sw2/dist/sweetalert2.min.css" rel="stylesheet" />
+        <link
+            href="vendor/boxed-check/css/boxed-check.min.css"
+            rel="stylesheet"
+        />
+        <link href="css/custom.css" rel="stylesheet" />
+        <script src="vendor/jquery3.6.0.min.js"></script>
 
         <title>Home Belajar Laravel 8</title>
     </head>
@@ -31,5 +57,6 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"
         ></script>
+        <script src="vendor/jquery3.6.0.min.js"></script>
     </body>
 </html>
