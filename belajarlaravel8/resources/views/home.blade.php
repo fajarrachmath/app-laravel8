@@ -37,6 +37,32 @@
                 </label>
             </div>
         </div>
+
+        <div
+            class="row boxed-check-group boxed-check-xs boxed-check-primary justify-content-center"
+        >
+            <label class="boxed-check">
+                <input
+                    class="boxed-check-input"
+                    type="radio"
+                    name="pilih_mess"
+                    id="pilih_mess1"
+                    value="Y"
+                />
+                <div class="boxed-check-label">Ya</div>
+            </label>
+            &nbsp; &nbsp;
+            <label class="boxed-check">
+                <input
+                    class="boxed-check-input"
+                    type="radio"
+                    name="pilih_mess"
+                    id="pilih_mess2"
+                    value="T"
+                />
+                <div class="boxed-check-label">Tidak</div>
+            </label>
+        </div>
         <div class="b">Apakah laporan ini pernah dilaporkan sebelumnya?</div>
         <div class="row g-3 mb-4">
             <div class="col text-center">
