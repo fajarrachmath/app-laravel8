@@ -1,104 +1,111 @@
 @extends('layouts.main')
 
-<!-- card header-->
+<!-- seksi card header-->
 @section('card-header')
 <div class="text-center h2">FORMULIR PELAPORAN</div>
 <div class="text-center h3 i">Whistle Blowing System (WBS)</div>
 <div class="text-center h5">Pengisian Pelaporan Masalah</div>
 @endsection
 
-<!-- Seksi container-->
+<!-- seksi card-body-->
 @section('card-body')
-<div class="row justify-content-center">
+<div class="row justify-content-center text-lg">
     <form action="" method="" class="form-group col-7">
-        <div class="b">Apakah anda bersedia mengungkapkan identitas anda?</div>
-        <div class="row g-3 mb-4">
-            <div class="col text-center">
-                <input
-                    class="form-check-input"
-                    type="radio"
-                    name="identitas"
-                    id="identitas_y"
-                    required
-                />
-                <label class="form-check-label" for="identitas_y">
-                    Saya Bersedia
+        <div class="b fs-5">
+            Apakah anda bersedia mengungkapkan identitas anda?
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-auto boxed-check-group boxed-check-xs boxed-check-primary"
+            >
+                <label class="boxed-check">
+                    <input
+                        class="boxed-check-input"
+                        type="radio"
+                        name="identitas"
+                        id="identitasy"
+                        value="Y"
+                        required
+                    />
+                    <div class="boxed-check-label">Ya</div>
                 </label>
             </div>
-            <div class="col text-center">
-                <input
-                    class="form-check-input"
-                    type="radio"
-                    name="identitas"
-                    id="identitas_t"
-                />
-                <label class="form-check-label" for="identitas_t">
-                    Saya Menolak
+            <div
+                class="col-auto boxed-check-group boxed-check-xs boxed-check-danger"
+            >
+                <label class="boxed-check col-auto">
+                    <input
+                        class="boxed-check-input"
+                        type="radio"
+                        name="identitas"
+                        id="identitast"
+                        value="T"
+                    />
+                    <div class="boxed-check-label">Tidak</div>
                 </label>
             </div>
         </div>
+        <div class="mb-4 blink" id="err_identitas"></div>
 
-        <div
-            class="row boxed-check-group boxed-check-xs boxed-check-primary justify-content-center"
-        >
-            <label class="boxed-check">
-                <input
-                    class="boxed-check-input"
-                    type="radio"
-                    name="pilih_mess"
-                    id="pilih_mess1"
-                    value="Y"
-                />
-                <div class="boxed-check-label">Ya</div>
-            </label>
-            &nbsp; &nbsp;
-            <label class="boxed-check">
-                <input
-                    class="boxed-check-input"
-                    type="radio"
-                    name="pilih_mess"
-                    id="pilih_mess2"
-                    value="T"
-                />
-                <div class="boxed-check-label">Tidak</div>
-            </label>
+        <div class="b fs-5">
+            Apakah laporan ini pernah dilaporkan sebelumnya?
         </div>
-        <div class="b">Apakah laporan ini pernah dilaporkan sebelumnya?</div>
-        <div class="row g-3 mb-4">
-            <div class="col text-center">
-                <input
-                    class="form-check-input"
-                    type="radio"
-                    name="laporan"
-                    id="laporan_y"
-                    required
-                />
-                <label class="form-check-label" for="laporan_y"> Sudah </label>
+        <div class="row justify-content-center">
+            <div
+                class="col-auto boxed-check-group boxed-check-xs boxed-check-primary"
+            >
+                <label class="boxed-check">
+                    <input
+                        class="boxed-check-input"
+                        type="radio"
+                        name="laporansebelumnya"
+                        id="laporansebelumnyay"
+                        value="Y"
+                        required
+                    />
+                    <div class="boxed-check-label">Ya (Pernah)</div>
+                </label>
             </div>
-            <div class="col text-center">
-                <input
-                    class="form-check-input"
-                    type="radio"
-                    name="laporan"
-                    id="laporan_t"
-                />
-                <label class="form-check-label" for="laporan_t"> Belum </label>
+            <div
+                class="col-auto boxed-check-group boxed-check-xs boxed-check-danger"
+            >
+                <label class="boxed-check col-auto">
+                    <input
+                        class="boxed-check-input"
+                        type="radio"
+                        name="laporansebelumnya"
+                        id="laporansebelumnyat"
+                        value="T"
+                    />
+                    <div class="boxed-check-label">Tidak (Belum)</div>
+                </label>
             </div>
         </div>
-        <div class="b">
-            Masukkan email yang akan anda gunakan untuk berkorespondensi dengan
-            kami?
+        <div class="mb-4 blink" id="err_laporansebelumnya"></div>
+
+        <div class="b fs-5">
+            <label for="email" class="form-label"
+                >Masukkan email yang akan anda gunakan untuk berkorespondensi
+                dengan kami?</label
+            >
         </div>
         <input
-            class="form-control col-4 mb-4"
+            class="form-control"
+            name="email"
+            id="email"
             type="email"
             placeholder="isikan e-mail anda"
-            aria-label="default input example"
             required
         />
-        <div class="b">Masalah yang diadukan</div>
+        <div class="mb-4 blink" id="err_email"></div>
 
-        <select class="form-control text-center mb-4" name="masalah" required>
+        <div class="b fs-5">Masalah yang diadukan</div>
+        <select
+            class="form-control text-center mb-4"
+            name="masalah"
+            id="masalah"
+            required
+        >
             <option class="i" value="">--Pilih Masalah--</option>
             <option value="Perilaku pegawai RSJ">Perilaku pegawai RSJ</option>
             <option value="Perilaku pegawai tidak sesuai kode etik">
@@ -118,52 +125,95 @@
             <option value="Suap dan Gratifikasi">Suap dan Gratifikasi</option>
             <option value="Perbuatan Curang">Perbuatan Curang</option>
         </select>
+        <div class="mb-4 blink" id="err_masalah"></div>
 
-        <div class="b">Jumlah Kerugian</div>
+        <div class="b fs-5">
+            <label for="jumlahkerugian" class="form-label"
+                >Jumlah Kerugian (dalam Rupiah)</label
+            >
+        </div>
         <input
-            class="form-control col-4 mb-4"
-            type="text"
-            placeholder="isikan keterangan jumlah maupun nominal"
-            aria-label="default input example"
+            class="form-control"
+            type="number"
+            min="0"
+            name="jumlahkerugian"
+            id="jumlahkerugian"
+            placeholder="isikan keterangan jumlah ataupun nominal"
             required
         />
+        <div class="i fw-light fs-6 text-center">
+            bila tidak tahu pasti, isikan dengan angka
+            <span class="b">0 (Nol)</span>
+        </div>
+        <div class="mb-4 blink" id="err_jumlahkerugian"></div>
 
-        <div class="mb-3">
+        <div class="b fs-5">
             <label for="pihakterlibat" class="form-label"
-                >Example textarea</label
+                >Pihak yang terlibat</label
             >
             <textarea
                 class="form-control"
+                name="pihakterlibat"
                 id="pihakterlibat"
                 rows="3"
+                required
             ></textarea>
         </div>
+        <div class="i fw-light fs-6 text-center">
+            isikan daftar nama yang terlibat
+        </div>
+        <div class="mb-4 blink" id="err_pihakterlibat"></div>
 
-        <div class="b">Lokasi Kejadian</div>
+        <div class="b fs-5">
+            <label for="lokasikejadian" class="form-label"
+                >Lokasi Kejadian</label
+            >
+            <textarea
+                class="form-control"
+                name="lokasikejadian"
+                id="lokasikejadian"
+                rows="3"
+                required
+            ></textarea>
+        </div>
+        <div class="mb-4 blink" id="err_lokasikejadian"></div>
+
+        <div class="b fs-5">
+            <label for="kronologi" class="form-label">Kronologi</label>
+            <textarea
+                class="form-control"
+                name="kronologi"
+                id="kronologi"
+                rows="3"
+                required
+            ></textarea>
+        </div>
+        <div class="mb-4 blink" id="err_kronologi"></div>
+
+        <div class="b fs-5">Waktu Kejadian</div>
         <input
-            class="form-control col-4 mb-4"
-            type="text"
-            placeholder="isikan keterangan jumlah maupun nominal"
-            aria-label="default input example"
-            required
-        />
-
-        <div class="b">Kronologi</div>
-        <textarea class="form-control-plaintext">
-            jelasakan kronologinya
-        </textarea>
-
-        <div class="b">Waktu Kejadian</div>
-        <input
-            class="form-control col-4 mb-4"
+            class="form-control"
             type="datetime-local"
-            placeholder="isikan keterangan jumlah maupun nominal"
-            aria-label="default input example"
+            name="waktukejadian"
+            id="waktukejadian"
             required
         />
+        <div class="mb-4 blink" id="err_kronologi"></div>
 
-        <div class="b">Unggah Dokumen Pendukung</div>
-        <input class="form-control mb-4" type="file" id="formFile" required />
+        <div class="b fs-5">
+            <label for="dokumenpendukung" class="form-label"
+                >Unggah Dokumen Pendukung</label
+            >
+            <input
+                class="form-control"
+                type="file"
+                name="dokumenpendukung"
+                id="dokumenpendukung"
+                required
+            />
+        </div>
+        <div class="mb-4 blink" id="err_dokumenpendukung"></div>
+
         <div class="row col text-right">
             <input type="submit" class="btn btn-success" value="Kirim" />
         </div>
