@@ -17,7 +17,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 /* -------------------------------------------------------------- Blur */
-.bd-blur{
+.bg-blur{
   background-color: #ffffff10;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
