@@ -64,7 +64,6 @@
         <script>
             $(document).ready(function () {
                 $("input[name=identitas]").click(function () {
-                    console.log($(this).attr("value"));
                     if ($(this).attr("value") == "Y") {
                         $("#datanamapelapor").show();
                     } else {
@@ -72,7 +71,6 @@
                     }
                 });
             });
-            // console.log("testing");
         </script>
 
         <div class="b fs-5">
