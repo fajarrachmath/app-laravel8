@@ -26,10 +26,6 @@
             rel="stylesheet"
             type="text/css"
         />
-        <link
-            href="vendor/bootstrap-icons/bootstrap-icons.css"
-            rel="stylesheet"
-        />
         <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" />
         <link href="vendor/sw2/dist/sweetalert2.min.css" rel="stylesheet" />
         <link
@@ -37,11 +33,11 @@
             rel="stylesheet"
         />
         <link href="css/custom.css" rel="stylesheet" />
-        <script src="vendor/jquery3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
         <title>Home Belajar Laravel 8</title>
     </head>
-    <body class="bg-wbs">
+    <body class="bg-img">
         <div class="container-md mt-5">
             <div class="card shadow-lg border-0 mb-4">
                 <div class="card-header bg-danger text-light">
@@ -57,6 +53,6 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"
         ></script>
-        <script src="vendor/jquery3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </body>
 </html>

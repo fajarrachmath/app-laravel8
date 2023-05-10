@@ -47,6 +47,34 @@
         </div>
         <div class="mb-4 blink" id="err_identitas"></div>
 
+        <div
+            class="form-floating mb-3"
+            id="datanamapelapor"
+            style="display: none"
+        >
+            <input
+                type="text"
+                class="form-control"
+                id="namapelapor"
+                placeholder="Isi Nama Pelapor"
+            />
+            <label for="namapelapor">Nama Pelapor</label>
+        </div>
+        <div class="mb-4 blink" id="err_namapelapor"></div>
+        <script>
+            $(document).ready(function () {
+                $("input[name=identitas]").click(function () {
+                    console.log($(this).attr("value"));
+                    if ($(this).attr("value") == "Y") {
+                        $("#datanamapelapor").show();
+                    } else {
+                        $("#datanamapelapor").hide();
+                    }
+                });
+            });
+            // console.log("testing");
+        </script>
+
         <div class="b fs-5">
             Apakah laporan ini pernah dilaporkan sebelumnya?
         </div>
