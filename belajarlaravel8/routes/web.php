@@ -13,18 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// test return view and var 
 Route::get('/', function () {
     return view('home', [
         "nama" => "nama_testing",
         "email" => "email@email.com"
     ]);
 });
-Route::get('/testing', function () {
-    return "TESTING";
-});
+
+// test return view 
 Route::get('/test', function () {
-    return view('test', [
-        "nama" => "nama_testing",
-        "email" => "email@email.com"
+    return view('test');
+});
+
+
+// test return view 
+Route::get('/cobaarrayvar', function () {
+    $data_nama = [
+        [
+            "nama" => "Rizki Egi",
+            "email" => "egi@gmail.com"
+        ],
+        [
+            "nama" => "Ferlistian Rizki",
+            "email" => "ferlis@gmail.com"
+        ]
+    ];
+
+    return view('cobaarrayvar', [
+        "title" => "nama_testing",
+        "data" => $data_nama
     ]);
 });

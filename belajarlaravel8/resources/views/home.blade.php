@@ -164,7 +164,7 @@
             min="0"
             name="jumlahkerugian"
             id="jumlahkerugian"
-            placeholder="isikan keterangan jumlah ataupun nominal"
+            placeholder="isikan nominal"
             required
         />
         <div class="i fw-light fs-6 text-center">
