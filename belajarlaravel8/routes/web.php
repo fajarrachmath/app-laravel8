@@ -16,8 +16,7 @@ use Illuminate\Support\Facades\Route;
 // test return view and var 
 Route::get('/', function () {
     return view('home', [
-        "nama" => "nama_testing",
-        "email" => "email@email.com"
+        "title" => "Wistle Blowing System"
     ]);
 });
 

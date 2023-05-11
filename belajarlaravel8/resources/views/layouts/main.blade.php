@@ -35,7 +35,7 @@
         <link href="css/custom.css" rel="stylesheet" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-        <title></title>
+        <title>{{ $title }}</title>
     </head>
     <body class="bg-img">
         @include('partials.navbar')
