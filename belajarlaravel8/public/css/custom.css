@@ -10,6 +10,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-size: cover;
 }
 
+.bg-gradient-primary{
+  background-image: linear-gradient(to right, #6781d6, #1c2bf3);
+}
+.bg-gradient-success{
+  background-image: linear-gradient(to right, #afdfaf, #2fe417);
+}
+.bg-gradient-warning{
+  background-image: linear-gradient(to right, #e2e1a8, #bbd814);
+}
 .bg-gradient-danger{
   background-image: linear-gradient(to right, #F05D75, #ED1C24);
 }

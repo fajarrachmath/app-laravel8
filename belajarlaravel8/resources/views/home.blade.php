@@ -251,7 +251,9 @@
             <div class="mb-4 blink" id="err_dokumenpendukung"></div>
 
             <div class="row col text-right">
-                <input type="submit" class="btn btn-success" value="Kirim" />
+                <a href="#" class="btn btn-outline-success submit"
+                    ><i class="fa-regular fa-paper-plane"></i> Kirim</a
+                >
             </div>
         </form>
     </div>

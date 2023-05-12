@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\coba_model;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,19 +34,8 @@ Route::get('/test', function () {
 
 // test return view 
 Route::get('/cobavararray', function () {
-    $data_nama = [
-        [
-            "nama" => "Rizki Egi",
-            "email" => "egi@gmail.com"
-        ],
-        [
-            "nama" => "Ferlistian Rizki",
-            "email" => "ferlis@gmail.com"
-        ]
-    ];
-
-    return view('cobaarrayvar', [
+    return view('cobavararray', [
         "title" => "Coba Var Array",
-        "data" => $data_nama
+        "data" => coba_model::all()
     ]);
 });
