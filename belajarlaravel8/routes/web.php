@@ -21,13 +21,18 @@ Route::get('/', function () {
 });
 
 // test return view 
+Route::get('/login', function () {
+    return view('login');
+});
+
+// test return view 
 Route::get('/test', function () {
     return view('test');
 });
 
 
 // test return view 
-Route::get('/cobaarrayvar', function () {
+Route::get('/cobavararray', function () {
     $data_nama = [
         [
             "nama" => "Rizki Egi",
@@ -40,7 +45,7 @@ Route::get('/cobaarrayvar', function () {
     ];
 
     return view('cobaarrayvar', [
-        "title" => "nama_testing",
+        "title" => "Coba Var Array",
         "data" => $data_nama
     ]);
 });
