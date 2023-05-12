@@ -9,6 +9,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-image: url(../img/bg-01.jpg);
     background-size: cover;
 }
+
+.bg-gradient-danger{
+  background-image: linear-gradient(to right, #F05D75, #ED1C24);
+}
 /* -------------------------------------------------------------- Blink */
 .blink {
   animation: blinker 1s linear infinite;
