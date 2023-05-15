@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class coba_model
+class m_test
 {
     static $data_nama = [
         [
@@ -13,8 +13,8 @@ class coba_model
             "email" => "admin@admin.com"
         ],
         [
-            "nama" => "fajar",
-            "email" => "admin@admin.com"
+            "nama" => "fajarasdasd",
+            "email" => "admin@admiassn.com"
         ]
     ];
 

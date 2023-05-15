@@ -13,7 +13,7 @@
                     />
                 </a>
                 <div class="vr m-2"></div>
-                <a class="navbar-link" href="http://103.147.222.122:92/">
+                <a class="navbar-link" href="/">
                     <img
                         src="img/WBS.png"
                         alt=""
@@ -31,17 +31,16 @@
                     />
                 </a>
                 <div class="vr m-2"></div>
-                <a class="nav-link active" href="/cobavararray"> ARRAY </a>
-                <div class="vr m-2"></div>
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
                 <a
-                    class="nav-link disabled"
-                    href="#"
-                    tabindex="-1"
-                    aria-disabled="true"
-                    >Disabled</a
+                    class="nav-link {{ $title === 'ARRAY' ? 'active' : '' }}"
+                    href="/_array"
+                >
+                    ARRAY
+                </a>
+                <a
+                    class="nav-link {{ $title === 'TEST' ? 'active' : '' }}"
+                    href="/_test"
+                    >TEST</a
                 >
             </div>
         </div>

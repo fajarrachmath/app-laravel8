@@ -1,18 +1,8 @@
 <?php
 
-use App\Models\coba_model;
+use App\Models\m_array;
+use App\Models\m_test;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 // test return view and var 
 Route::get('/', function () {
@@ -31,11 +21,25 @@ Route::get('/test', function () {
     return view('test');
 });
 
+// test return var array 
+Route::get('/_array', function () {
+    return view('_array', [
+        "title" => "ARRAY",
+        "data" => m_array::all()
+    ]);
+});
+// test return var array 
+Route::get('_post/{slug}', function ($slug) {
+    return view('_post', [
+        "title" => "SLUG",
+        "data" => m_array::find($slug)
+    ]);
+});
 
-// test return view 
-Route::get('/cobavararray', function () {
-    return view('cobavararray', [
-        "title" => "Coba Var Array",
-        "data" => coba_model::all()
+// test return var array 
+Route::get('/_test', function () {
+    return view('_test', [
+        "title" => "TEST",
+        "data" => m_test::all()
     ]);
 });
