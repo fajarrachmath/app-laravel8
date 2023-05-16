@@ -38,7 +38,7 @@
         <title>{{ $title }}</title>
     </head>
 
-    <body class="bg-img">
+    <body class="bg-img bg-primary">
         @include('partials.navbar')
         <hr />
         <hr />
