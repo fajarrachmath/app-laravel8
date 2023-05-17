@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Models\m_array;
 use App\Models\m_test;
 use Illuminate\Support\Facades\Route;
@@ -22,19 +23,9 @@ Route::get('/test', function () {
 });
 
 // test return var array 
-Route::get('/_array', function () {
-    return view('_array', [
-        "title" => "ARRAY",
-        "data" => m_array::all()
-    ]);
-});
-// test return var array 
-Route::get('_post/{slug}', function ($slug) {
-    return view('_post', [
-        "title" => "SLUG",
-        "data" => m_array::find($slug)
-    ]);
-});
+Route::get('/_array', [PostController::class, 'index']);
+Route::get('/_post/{slug}', [PostController::class, 'show']);
+
 
 // test return var array 
 Route::get('/_test', function () {

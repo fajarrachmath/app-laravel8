@@ -22,17 +22,17 @@ class m_array
 
     static public function all()
     {
-        return static::$data_nama;
+        return collect(static::$data_nama);
     }
     static public function find($slug)
     {
-        $posts = self::$data_nama;
-        $array = [];
-        foreach ($posts as $data) {
-            if ($data['slug'] === $slug) {
-                $array = $data;
-            }
-        }
-        return $array;
+        $posts = self::all();
+        // $array = [];
+        // foreach ($posts as $data) {
+        //     if ($data['slug'] === $slug) {
+        //         $array = $data;
+        //     }
+        // }
+        return $posts->firstWhere('slug', $slug);
     }
 }

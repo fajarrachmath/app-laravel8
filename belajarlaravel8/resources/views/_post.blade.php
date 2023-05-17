@@ -1,3 +1,4 @@
+<!-- layout  -->
 @extends('layouts.main')
 
 <!-- seksi card header-->
@@ -11,8 +12,8 @@
 @section('card-body')
 <div class="card-body">
     <div class="row justify-content-center text-lg">
-        <h2>asasd</h2>
-        <h3>asd</h3>
+        <h2>{{ $data["nama"] }}</h2>
+        <h3>{{ $data["email"] }}</h3>
     </div>
     <hr />
     <a href="/_array">Back to post</a>
